@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Love</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="contenido">
+			<section class="section-heart open" id="heart">
+				<div class="heart" onclick="abrirFelicitaciones()"></div>
+			</section>
+			<section class="section-felicitaciones" id="felicitaciones">
+				<canvas id="confetti"></canvas>
+				<div class="contenido-felicitaciones">
+					<div class="sobre-carta" id="sobre">
+						<div class="cuerpo-atras-sobre">
+							<h2>Para: Rosmery</h2>
+						</div>
+						<div class="tapa-sobre"></div>
+						<div class="cuerpo-sobre"></div>
+						<div class="btn-carta" id="btn-carta">
+							<h2>¡Feliz Cumpleaños!</h2>
+							<div class="corazon" onclick="abrirCarta()">♥</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-carta" id="carta">
+				<div class="carta">
+					<h1>¡Feliz cumpleaños, mi amor!</h1>
+					<p class="texto">
+						Quiero aprovechar este hermoso día para decirte que eres
+						la novia perfecta, la mujer más linda, especial,
+						inteligente y atenta. En este día de tu cumpleaños,
+						quiero recordarte lo feliz que me siento cuando estoy a
+						tu lado. Y soy aún más feliz cuando veo tu sonrisa y tus
+						ojos que se iluminan amorosamente cuando me ven. Espero
+						que nuestra historia continúe y que podamos compartir
+						muchos momentos inolvidables. Te amo y te deseo gran
+						felicidad, no solo en este día, sino en todos los días
+						de tu existencia.
+					</p>
+					<div class="fotos" onclick="abrirGaleria()">
+						<img src="assets/camara.svg" />
+					</div>
+				</div>
+			</section>
+			<section class="section-galeria" id="galeria"></section>
+		</div>
+		<script src="script.js" />
+	</body>
+</html>

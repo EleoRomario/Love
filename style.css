@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "DM Sans", sans-serif;
+}
+.contenido {
+	height: 100vh;
+	position: relative;
+}
+.section-heart.open {
+	display: block;
+	background: #ecf0f1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.section-heart {
+	display: none;
+}
+.section-felicitaciones {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #ce3635;
+	transform-origin: center;
+	clip-path: circle(0% at 50% 50%);
+}
+.section-felicitaciones.open {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: circle(100% at 50% 50%);
+	transition: 1s ease;
+}
+#confetti {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.sobre-carta{
+	display: flex;
+	justify-content: center;
+	width: 30rem;
+	height: 30rem;
+	position: relative;
+	z-index: 0;
+	filter: drop-shadow(-1px 6px 3px rgba(43, 43, 43, 0.5));
+}
+.tapa-sobre {	
+	position: absolute;
+	width: 100%;
+	height: 10.5rem;
+	background: linear-gradient(to bottom, #ECF0F1, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	;
+	clip-path: polygon(48% 0, 52% 0, 100% 90%, 100% 100%, 0 100%, 0 91%);
+}
+.cuerpo-sobre{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 20rem;
+	background: linear-gradient(to top, #ECF0F1, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	;
+	bottom: 0;
+	
+}
+.btn-carta{
+	position: absolute;
+	z-index: 3;
+	height: 18rem;
+	width: 80%;	
+	background: url("assets/paper.jpg");
+	background-size: cover;
+	background-position: top;
+	bottom: 1rem;
+	transition: 1s ease-in-out;
+	border-radius: 10px;
+	box-shadow: -1px -1px 5px 0px rgba(65, 65, 65, 0.47);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.btn-carta:hover{
+	bottom: 10rem;
+}
+.cuerpo-atras-sobre{
+	z-index: 4;
+	position: absolute;
+	width: 100%;
+	height: 20rem;
+	bottom: 0;
+	background: #ecf0f1;
+	clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.cuerpo-atras-sobre h2{
+	position: absolute;
+	font-family: 'Dancing Script', cursive;
+	font-size: 3rem;
+	bottom: 2rem;
+	color: #323232;
+	left: 1rem;
+}
+.btn-carta h2{
+	font-size: 3rem;
+	font-family: 'Dancing Script', cursive;
+	/* opacity: 0.8; */
+	color: #1C46A7;
+}
+.btn-carta .corazon{
+	font-size: 5rem;
+	color: #E2264D;
+}
+.btn-carta .corazon:hover{
+	color: #ce3635;
+}
+.section-galeria {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #ce3635;
+	transform-origin: center;
+	clip-path: circle(0% at 50% 50%);
+}
+.section-galeria.open {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: circle(100% at 50% 50%);
+	transition: 1s ease;
+}
+
+/* CARTA */
+.section-carta {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #3498db;
+	transform-origin: center;
+	clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);;
+}
+.section-carta.open{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	transition: 0.5s ease;
+}
+
+.carta {
+	width: 20rem;
+	height: 27rem;
+	background: url("assets/paper.jpg");
+	background-size: cover;
+	padding: 2rem 3rem;
+	box-shadow: -1px -1px 5px 0px rgba(65, 65, 65, 0.47);
+	position: relative;
+	border-radius: 5px;
+}
+h1, p {
+	font-family: 'Dancing Script', cursive;
+	font-size: 1.5rem;
+	color: #1C46A7;
+}
+p{
+	
+	display: none;
+}
+.fotos{
+	height: 4rem;
+	width: 4rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+}
+.fotos:hover{
+	height: 4.1rem;
+	width: 4.1rem;
+}
+
+.heart {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: url(https://cssanimation.rocks/images/posts/steps/heart.png)
+		no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+	animation: fave-heart 1s steps(28);
+}
+.heart:hover {
+	background-position: -2800px 0;
+	transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -2800px 0;
+	}
+}
