@@ -1,3 +1,4 @@
+const container = document.getElementById("contenido")
 const heart = document.getElementById("heart");
 const felicitaciones = document.getElementById("felicitaciones");
 const carta = document.getElementById("carta");
@@ -6,6 +7,7 @@ const galeria = document.getElementById("galeria");
 const abrirFelicitaciones = () => {
 	heart.classList.toggle("open");
 	felicitaciones.classList.toggle("open");
+	container.style.background ="#ce3635";
 };
 const abrirCarta = () => {
 	felicitaciones.classList.toggle("open");
@@ -20,7 +22,11 @@ const abrirGaleria = () => {
 	carta.classList.toggle("open");
 	galeria.classList.toggle("open");
 }
-
+const btnAtras = (actual, atras) =>{
+	alert("hola");
+	actual.classList.toggle("open")
+	atras.classList.toggle("open")
+}
 const escribir = (element, speed) => {
 	let text = element.innerHTML;
 	element.innerHTML = "";
@@ -36,8 +42,8 @@ const escribir = (element, speed) => {
 	}, speed);
 };
 let speed = 75;
-let h1 = document.querySelector("h1");
-let p = document.querySelector("p");
+let h1 = document.querySelector(".carta__titulo");
+let p = document.querySelector(".carta__texto");
 let delay = h1.innerHTML.length * speed + speed;
 
 // escribir(h1, speed);

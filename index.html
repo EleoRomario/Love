@@ -8,30 +8,32 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="contenido">
+		<div class="contenido open" id="contenido">
+			<canvas id="confetti"></canvas>
 			<section class="section-heart open" id="heart">
+				<div class="feliz_cumple">
+					<p class="feliz">feliz</p>
+					<h1>Cumpleaños</h1>
+					<p class="rosmery">Rosmery</p>
+					<img src="./assets/sombrero.png" class="sombrero">
+				</div>
 				<div class="heart" onclick="abrirFelicitaciones()"></div>
 			</section>
-			<section class="section-felicitaciones" id="felicitaciones">
-				<canvas id="confetti"></canvas>
+			<section class="section-felicitaciones" id="felicitaciones">				
 				<div class="contenido-felicitaciones">
-					<div class="sobre-carta" id="sobre">
-						<div class="cuerpo-atras-sobre">
-							<h2>Para: Rosmery</h2>
-						</div>
-						<div class="tapa-sobre"></div>
-						<div class="cuerpo-sobre"></div>
-						<div class="btn-carta" id="btn-carta">
-							<h2>¡Feliz Cumpleaños!</h2>
-							<div class="corazon" onclick="abrirCarta()">♥</div>
-						</div>
-					</div>
+					<img src="./assets/foto2.jpg" class="foto uno">
+					<img src="./assets/toonmecom_97c5fb.jpg" class="foto dos">
+					<h3>feliz</h3>
+					<h1>Cumpleaños</h1>
+					<h3>amor</h3>
+					<p>Me siento muy afortunado de conocerte. Espero que tu cumpleaños sea tan especial como tú. Que todos tus sueños se hagan realidad y que cumplas todos tus obejtivos que te propongas. ¡Muchas felicidades!</p>
+					<img src="assets/carta-de-amor.png" class="abrir_carta" onclick="abrirCarta()"/>
 				</div>
 			</section>
 			<section class="section-carta" id="carta">
 				<div class="carta">
-					<h1>¡Feliz cumpleaños, mi amor!</h1>
-					<p class="texto">
+					<h1 class="carta__titulo">¡Feliz cumpleaños, mi amor!</h1>
+					<p class="carta__texto">
 						Quiero aprovechar este hermoso día para decirte que eres
 						la novia perfecta, la mujer más linda, especial,
 						inteligente y atenta. En este día de tu cumpleaños,
