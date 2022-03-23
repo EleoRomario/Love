@@ -10,6 +10,7 @@ const abrirFelicitaciones = () => {
 	felicitaciones.classList.toggle("open");
 	container.style.background ="#ce3635";
 };
+
 // Minimizar Reproducto de musica
 const musica = document.getElementById("wrapper")
 // const abrirMusic = document.getElementById("abrir-music");

@@ -64,6 +64,32 @@
 	right: 0;
 	top: 15%;
 }
+.regalo{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	background: url("./assets/gift-box.png")
+		no-repeat;
+	background-position: 0 0;
+	cursor: url("./assets/heartsvg.png"),
+    pointer;
+	animation: fave-box 0.1s steps(3);
+
+}
+.regalo:hover {
+	background-position: -300px 0;
+	transition: background 0.1s steps(3);
+}
+@keyframes fave-box {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -300px 0;
+	}
+}
+
 .heart {
 	width: 100px;
 	height: 100px;
@@ -72,7 +98,7 @@
 	background: url(https://cssanimation.rocks/images/posts/steps/heart.png)
 		no-repeat;
 	background-position: 0 0;
-	cursor: url("./assets/heartsvg.svg"),
+	cursor: url("./assets/heartsvg.png"),
     pointer;
 	animation: fave-heart 1s steps(28);
 }
@@ -150,7 +176,7 @@
 	right: auto;
 	top: 2rem;
 	width: 2.5rem;
-	cursor: url("./assets/heartsvg.svg"),
+	cursor: url("./assets/heartsvg.png"),
     pointer;
 	transition: 0.2s;
 	animation: 0.2s loop infinite alternate-reverse;
@@ -174,7 +200,7 @@
 	position: absolute;
 	bottom: 1rem;
 	right: 1rem;
-	cursor: url("./assets/heartsvg.svg"),
+	cursor: url("./assets/heartsvg.png"),
     pointer;
 	transition: 0.2s;
 }
