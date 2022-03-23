@@ -144,6 +144,24 @@
 	left: 0;
 	transform: rotate(-30deg);
 }
+.musica{
+	position: absolute;
+	left: auto;
+	right: auto;
+	top: 2rem;
+	width: 2.5rem;
+	cursor: url("./assets/heartsvg.svg"),
+    pointer;
+	transition: 0.2s;
+	animation: 0.2s loop infinite alternate-reverse;
+}
+@keyframes loop{
+	0%{
+		width: 2.5rem;
+	}100%{
+		width: 2.6rem;
+	}
+}
 .contenido-felicitaciones .foto.dos{
 	position: absolute;
 	top: 0;
@@ -171,6 +189,7 @@
 /* CARTA */
 .section-carta {
 	display: none;
+	z-index: 3;
 }
 .section-carta.open{
 	display: flex;
@@ -187,6 +206,12 @@
 	box-shadow: -1px -1px 5px 0px rgba(65, 65, 65, 0.47);
 	position: relative;
 	border-radius: 5px;
+}
+.carta img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(-30deg);
 }
 .carta__titulo, .carta__texto {
 	font-family: 'Dancing Script', cursive;

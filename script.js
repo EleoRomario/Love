@@ -4,11 +4,24 @@ const felicitaciones = document.getElementById("felicitaciones");
 const carta = document.getElementById("carta");
 const galeria = document.getElementById("galeria");
 
+
 const abrirFelicitaciones = () => {
 	heart.classList.toggle("open");
 	felicitaciones.classList.toggle("open");
 	container.style.background ="#ce3635";
 };
+// Minimizar Reproducto de musica
+const musica = document.getElementById("wrapper")
+// const abrirMusic = document.getElementById("abrir-music");
+const closeMusic = document.getElementById("closeMusic");
+closeMusic.addEventListener("click", () =>{
+	musica.classList.toggle("close");
+})
+const abrirMusica = () =>{
+	musica.classList.toggle("close");
+}
+// -----Fin Reproductor de musica
+
 const abrirCarta = () => {
 	felicitaciones.classList.toggle("open");
 	carta.classList.toggle("open");
