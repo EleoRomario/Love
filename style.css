@@ -329,3 +329,37 @@
 .foto.tres.abierto{
 	transform: rotate(0deg);
 }
+
+@media screen and (max-width: 768px){
+	.section-galeria > p{
+		bottom: .5rem;
+		font-size: 2rem;
+	}
+	.foto{
+		right: 1rem;
+	}
+	.foto.uno{
+		bottom: 5rem;
+	}
+	.foto.dos{
+		bottom: 4rem;
+	}
+	.foto.tres{
+		bottom: 3rem;
+	}
+	.foto.cuatro{
+		bottom: 2rem;
+	}
+	.foto.cinco{
+		bottom: 1rem;
+	}
+	.foto.abierto{
+		left: 3rem;
+		top: 2rem;
+		width: 15rem;
+		height: 13rem;
+	}
+	.foto.abierto > .pieFoto{
+		font-size: 1rem;
+	}
+}
