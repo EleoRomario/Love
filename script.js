@@ -1,46 +1,27 @@
-const container = document.getElementById("contenido")
+const container = document.getElementById("contenido");
 const heart = document.getElementById("heart");
 const felicitaciones = document.getElementById("felicitaciones");
 const carta = document.getElementById("carta");
 const galeria = document.getElementById("galeria");
 
-
 const abrirFelicitaciones = () => {
 	heart.classList.toggle("open");
 	felicitaciones.classList.toggle("open");
-	container.style.background ="#ce3635";
+	container.style.background = "#ce3635";
 };
 
 // Minimizar Reproducto de musica
-const musica = document.getElementById("wrapper")
+const musica = document.getElementById("wrapper");
 // const abrirMusic = document.getElementById("abrir-music");
 const closeMusic = document.getElementById("closeMusic");
-closeMusic.addEventListener("click", () =>{
+closeMusic.addEventListener("click", () => {
 	musica.classList.toggle("close");
-})
-const abrirMusica = () =>{
+});
+const abrirMusica = () => {
 	musica.classList.toggle("close");
-}
+};
 // -----Fin Reproductor de musica
 
-const abrirCarta = () => {
-	felicitaciones.classList.toggle("open");
-	carta.classList.toggle("open");
-	escribir(h1, speed);
-setTimeout(() => {
-	p.style.display = "inline-block";
-	escribir(p, speed);
-}, delay);
-};
-const abrirGaleria = () => {
-	carta.classList.toggle("open");
-	galeria.classList.toggle("open");
-}
-const btnAtras = (actual, atras) =>{
-	alert("hola");
-	actual.classList.toggle("open")
-	atras.classList.toggle("open")
-}
 const escribir = (element, speed) => {
 	let text = element.innerHTML;
 	element.innerHTML = "";
@@ -65,8 +46,6 @@ let delay = h1.innerHTML.length * speed + speed;
 // 	p.style.display = "inline-block";
 // 	escribir(p, speed);
 // }, delay);
-
-
 
 var canvas = document.querySelector("canvas");
 var context = canvas.getContext("2d");
@@ -201,3 +180,55 @@ window.addEventListener("resize", initialize);
 
 animate();
 
+let cerrarCarta = true;
+const abrirCarta = () => {
+	felicitaciones.classList.toggle("open");
+	carta.classList.toggle("open");
+	// escribir(h1, speed);
+	// console.log(delay);
+	// setTimeout(() => {
+	// 	p.style.display = "inline-block";
+	// 	escribir(p, speed);
+	// }, delay);
+};
+
+const closeCarta = document.querySelector("#closeCarta");
+closeCarta.addEventListener("click", () => {
+	// carta.classList.toggle("open");
+	// console.log();
+	carta.classList.toggle("open");
+	felicitaciones.classList.toggle("open");
+});
+
+const abrirGaleria = () =>{
+	galeria.classList.toggle("open");
+	felicitaciones.classList.toggle("open")
+}
+const closeGaleria = document.querySelector("#closeGaleria");
+closeGaleria.addEventListener("click", () =>{
+	galeria.classList.toggle("open");
+	felicitaciones.classList.toggle("open");
+})
+
+const fotos = document.querySelectorAll('.foto');
+console.log(fotos);
+
+const textos = [
+	"Con mi bella durmiente. ❤",
+	"Te amo ❤",
+	"3 años, y por miles mas. ❤",
+	"Aqui casual comiendo, uhmm rico. ",
+	"Rosmery, El amor de mi vida. ❤"
+]
+let texto = document.createElement('p');
+texto.innerHTML = "hola";
+texto.className = "pieFoto";
+
+fotos.forEach((f,i) => {
+	f.addEventListener('click', () => {
+		fotos.forEach(fo=>fo.classList.remove('abierto'))
+		f.classList.add('abierto')
+			texto.innerHTML = textos[i];
+			f.appendChild(texto);
+	})
+})

@@ -18,6 +18,19 @@
 	z-index: 999;
 	display: block;
 }
+@media screen and (max-width: 600px) {
+	.wrapper{
+		width: 80%;
+	}
+	.music-list.show{
+		width: 85%;
+	}
+	.carta{
+		width: 17rem;
+		height: 33rem;
+		padding: 2rem 2rem;
+	}
+}
 .wrapper.close {
 	display: none;
 }

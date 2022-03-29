@@ -64,32 +64,14 @@
 	right: 0;
 	top: 15%;
 }
-.regalo{
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: 0;
-	background: url("./assets/gift-box.png")
-		no-repeat;
-	background-position: 0 0;
-	cursor: url("./assets/heartsvg.png"),
-    pointer;
-	animation: fave-box 0.1s steps(3);
-
-}
-.regalo:hover {
-	background-position: -300px 0;
-	transition: background 0.1s steps(3);
-}
-@keyframes fave-box {
-	0% {
-		background-position: 0 0;
+@media screen and (max-width: 600px) {
+	.section-heart{
+		width: 100%;
 	}
-	100% {
-		background-position: -300px 0;
+	.feliz_cumple>h1{
+		font-size: 5rem;
 	}
 }
-
 .heart {
 	width: 100px;
 	height: 100px;
@@ -157,19 +139,6 @@
 	font-family: 'Nunito', sans-serif;
 	color: #fc809b;
 }
-.contenido-felicitaciones .foto{
-	width: 5rem;
-	margin: 2rem 0;
-	border: 5px solid white;
-	border-bottom: 15px solid white;
-	box-shadow: 1px 1px 5px 1px rgba(65, 65, 65, 0.47);
-}
-.contenido-felicitaciones .foto.uno{
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: rotate(-30deg);
-}
 .musica{
 	position: absolute;
 	left: auto;
@@ -188,23 +157,24 @@
 		width: 2.6rem;
 	}
 }
-.contenido-felicitaciones .foto.dos{
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: rotate(30deg);
+.regalo{
+	transform: rotate(5deg);
+	left: 1rem;
 }
 .abrir_carta{
-	width: 2rem;
 	transform: rotate(-5deg);
-	position: absolute;
-	bottom: 1rem;
 	right: 1rem;
+	
+}
+.abrir_carta,.regalo , .fotos{
+	bottom: 1rem;
+	width: 2rem;
+	position: absolute;
 	cursor: url("./assets/heartsvg.png"),
     pointer;
 	transition: 0.2s;
 }
-.abrir_carta:hover{
+.abrir_carta:hover,.regalo:hover, .fotos:hover{
 	width: 2.5rem;
 }
 .btn-atras{
@@ -225,7 +195,6 @@
 
 .carta {
 	width: 20rem;
-	height: 27rem;
 	background: url("assets/paper.jpg");
 	background-size: cover;
 	padding: 2rem 3rem;
@@ -244,20 +213,119 @@
 	font-size: 1.5rem;
 	color: #1C46A7;
 }
-.carta__texto{	
+#closeCarta{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	cursor: pointer;
+	color: #1C46A7;
+}
+/* Galeria */
+.section-galeria{
+	width: 40rem;
+	height: 30rem;
+	background: #B6DCDB;
+	box-shadow: 1px 3px 1px 1px rgba(150, 150, 150, 0.26);
+	z-index: 3;
+	position: relative;
+	border-radius: 20px;
 	display: none;
 }
-.fotos{
-	height: 4rem;
-	width: 4rem;
+.section-galeria.open{
+	display: block;
+}
+.camara{
 	position: absolute;
-	bottom: 0;
+	width: 13rem;
+	bottom: 5rem;
+}
+.globitos img{
+	position: absolute;
 	right: 0;
+	width: 10rem;
+}
+.section-galeria p{
+	font-family: 'Meow Script', cursive;
+	font-size: 4rem;
+	color: #051F36;
+	position: absolute;
+	bottom: 2rem;
+}
+#closeGaleria{
+	color: #81ADAE;
+	cursor: pointer;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+.foto{
+	position: absolute;
+	height: 6rem;
+	width: 6rem;
+	right: 3.1rem;
+	box-shadow: 1px 3px 1px 1px rgba(150, 150, 150, 0.26);
+	border: .2rem solid #fff;
+	border-bottom: 1rem solid #fff;
+	transition: .5s;
 	cursor: pointer;
 }
-.fotos:hover{
-	height: 4.1rem;
-	width: 4.1rem;
+.foto.abierto > .pieFoto{
+	font-family: "DM Sans", sans-serif;
+	position: absolute;
+	bottom: -2.5rem;
+	width: 100%;
+	font-size: 1.2rem;
+	color: #051F36;
 }
-
-
+.foto.abierto{
+	top: 2rem;
+	left: 8rem;
+	width: 20rem;
+	height: 18rem;
+	border: .3rem solid #fff;
+	border-bottom: 3rem solid #fff;
+}
+.foto.uno{
+	bottom: 7rem;
+	background: url("assets/foto5.jpg");
+	background-position: center;
+	background-size: cover;
+	transform: rotate(20deg);
+}
+.foto.dos{
+	bottom: 6rem;
+	background: url("assets/foto2.jpg");
+	background-position: center;
+	background-size: cover;
+	transform: rotate(15deg);
+}
+.foto.tres{
+	bottom: 5rem;
+	background: url("assets/foto3.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: rotate(10deg);
+}
+.foto.cuatro{
+	bottom: 4rem;
+	background: url("assets/foto4.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.foto.cinco{
+	bottom: 3rem;
+	background: url("assets/toonmecom_97c5fb.jpg");
+	background-position: center;
+	background-size: cover;
+	transform: rotate(-10deg);
+}
+.foto.cinco.abierto{
+	transform: rotate(0deg);
+}
+.foto.uno.abierto{
+	transform: rotate(0deg);
+}
+.foto.tres.abierto{
+	transform: rotate(0deg);
+}

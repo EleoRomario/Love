@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Love</title>
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="reproductor.css" />
 		<link
@@ -32,8 +32,6 @@
 						class="musica"
 						onclick="abrirMusica()"
 					/>
-					<img src="./assets/foto2.jpg" class="foto uno" />
-					<img src="./assets/toonmecom_97c5fb.jpg" class="foto dos" />
 					<h3>feliz</h3>
 					<h1>Cumpleaños</h1>
 					<h3>amor</h3>
@@ -41,9 +39,18 @@
 						Me siento muy afortunado de conocerte. Espero que tu
 						cumpleaños sea tan especial como tú. Que todos tus
 						sueños se hagan realidad y que cumplas todos tus
-						obejtivos que te propongas. ¡Muchas felicidades!
+						objetivos que te propongas. ¡Muchas felicidades!
 					</p>
-					<div class="regalo"></div>
+					<img
+						src="assets/camera.png"
+						class="fotos"
+						onclick="abrirGaleria()"
+					/>
+					<img
+						src="assets/gift.png"
+						class="regalo"
+						onclick="abrirRegalo()"
+					/>
 					<img
 						src="assets/carta-de-amor.png"
 						class="abrir_carta"
@@ -114,13 +121,10 @@
 					</ul>
 				</div>
 			</div>
+			<!-- Carta -->
 			<section class="section-carta" id="carta">
 				<div class="carta">
-					<img
-						src="./assets/love-song.png"
-						class="musica"
-						onclick="abrirMusica()"
-					/>
+					<i class="material-icons" id="closeCarta">close</i>
 					<h1 class="carta__titulo">¡Feliz cumpleaños, mi amor!</h1>
 					<p class="carta__texto">
 						Quiero aprovechar este hermoso día para decirte que eres
@@ -134,12 +138,19 @@
 						felicidad, no solo en este día, sino en todos los días
 						de tu existencia.
 					</p>
-					<div class="fotos" onclick="abrirGaleria()">
-						<img src="assets/camara.svg" />
-					</div>
 				</div>
 			</section>
-			<section class="section-galeria" id="galeria"></section>
+			<section class="section-galeria" id="galeria">
+				<i class="material-icons" id="closeGaleria">close</i>
+				<div class="globitos"><img src="./assets/balloons.png" alt=""></div>
+				<div class="camara"><img src="./assets/camara.svg" alt=""></div>
+				<div class="foto uno"></div>
+				<div class="foto dos"></div>
+				<div class="foto tres"></div>
+				<div class="foto cuatro"></div>
+				<div class="foto cinco"></div>
+				<p>Feliz Cumpleaños ♡</p>
+			</section>
 		</div>
 		<script src="script.js"></script>
 		<script src="js/music-list.js"></script>
