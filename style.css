@@ -141,25 +141,16 @@
 }
 .musica{
 	position: absolute;
-	left: auto;
-	right: auto;
-	top: 2rem;
+	bottom: 1rem;
+	left: 1rem;
 	width: 2.5rem;
 	cursor: url("./assets/heartsvg.png"),
     pointer;
-	transition: 0.2s;
-	animation: 0.2s loop infinite alternate-reverse;
+	transform: rotate(12deg);
+	transition: .3s;
 }
-@keyframes loop{
-	0%{
-		width: 2.5rem;
-	}100%{
-		width: 2.6rem;
-	}
-}
-.regalo{
-	transform: rotate(5deg);
-	left: 1rem;
+.musica:hover{
+	width: 3rem;
 }
 .abrir_carta{
 	transform: rotate(-5deg);
@@ -327,6 +318,12 @@
 	transform: rotate(0deg);
 }
 .foto.tres.abierto{
+	transform: rotate(0deg);
+}
+.foto.dos.abierto{
+	transform: rotate(0deg);
+}
+.foto.cuatro.abierto{
 	transform: rotate(0deg);
 }
 

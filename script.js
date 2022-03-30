@@ -216,7 +216,7 @@ console.log(fotos);
 const textos = [
 	"Con mi bella durmiente. ❤",
 	"Te amo ❤",
-	"3 años, y por miles mas. ❤",
+	"3 años, y por muchos mas. ❤",
 	"Aqui casual comiendo, uhmm rico. ",
 	"Rosmery, El amor de mi vida. ❤"
 ]
