@@ -12,6 +12,7 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 		/>
+		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 	</head>
 	<body>
 		<div class="contenido open" id="contenido">
@@ -27,7 +28,6 @@
 			</section>
 			<section class="section-felicitaciones" id="felicitaciones">
 				<div class="contenido-felicitaciones">
-					
 					<h3>feliz</h3>
 					<h1>Cumpleaños</h1>
 					<h3>amor</h3>
@@ -136,19 +136,73 @@
 					</p>
 				</div>
 			</section>
+			<!-- Galeria -->
 			<section class="section-galeria" id="galeria">
 				<i class="material-icons" id="closeGaleria">close</i>
-				<div class="globitos"><img src="./assets/balloons.png" alt=""></div>
-				<div class="camara"><img src="./assets/camara.svg" alt=""></div>
-				<div class="foto uno"></div>
-				<div class="foto dos"></div>
-				<div class="foto tres"></div>
-				<div class="foto cuatro"></div>
-				<div class="foto cinco"></div>
-				<p>Feliz Cumpleaños ♡</p>
+				<div class="swiper swiper-album album">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide album__uno">
+							<div class="album__uno-foto foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<p>Feliz Cumpleaños</p>
+							<h1>Rosmery</h1>
+							<img src="assets/heart1.svg" class="corazon1" />
+							<img src="assets/heart1.svg" class="corazon2" />
+							<img src="assets/heart2.svg" class="corazon3" />
+							<img src="assets/heart2.svg" class="corazon4" />
+						</div>
+						<div class="swiper-slide album__dos">
+							<p>El primer amor no siempre llega en orden.</p>
+							<div class="album__dos-foto foto2 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<div class="album__dos-foto foto1 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<img src="assets/heart1.svg" class="corazon1" />
+							<img src="assets/heart2.svg" class="corazon2" />
+						</div>
+						<div class="swiper-slide album__tres">
+							<p>Nadie como tu, <br>y ese es tu poder.</p>
+							<div class="album__tres-foto foto2 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<div class="album__tres-foto foto1 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<img src="assets/heart2.svg" class="corazon1" />
+							<img src="assets/heart1.svg" class="corazon2" />
+						</div>
+						<div class="swiper-slide album__cuatro">
+							<p>Me alegro muchísimo de <br>haberte conocido, no importa <br>cómo acabe esto; siempre <br> estaré agradecido que <br>nuestros caminos se hayan <br>cruzado.</p>
+							<div class="album__cuatro-foto foto2 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<div class="album__cuatro-foto foto1 foto">
+								<img src="assets/cinta.png" class="cinta" />
+							</div>
+							<img src="assets/heart2.svg" class="corazon1" />
+							<img src="assets/heart1.svg" class="corazon2" />
+						</div>
+					</div>
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
 			</section>
 		</div>
 		<script src="script.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			let swiper = new Swiper(".swiper-album", {
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+		</script>
 		<script src="js/music-list.js"></script>
 		<script src="js/script.js"></script>
 	</body>

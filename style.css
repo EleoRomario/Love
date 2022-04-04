@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -215,148 +216,343 @@
 .section-galeria{
 	width: 40rem;
 	height: 30rem;
-	background: #B6DCDB;
+	background: url('assets/album.jpg');
+	background-size: cover;
+	background-position: center;
 	box-shadow: 1px 3px 1px 1px rgba(150, 150, 150, 0.26);
 	z-index: 3;
 	position: relative;
 	border-radius: 20px;
 	display: none;
+	overflow: hidden;
 }
 .section-galeria.open{
 	display: block;
 }
-.camara{
-	position: absolute;
-	width: 13rem;
-	bottom: 5rem;
-}
-.globitos img{
-	position: absolute;
-	right: 0;
-	width: 10rem;
-}
-.section-galeria p{
-	font-family: 'Meow Script', cursive;
-	font-size: 4rem;
-	color: #051F36;
-	position: absolute;
-	bottom: 2rem;
-}
 #closeGaleria{
-	color: #81ADAE;
+	color: #FC4868;
 	cursor: pointer;
 	position: absolute;
 	top: 0.5rem;
 	left: 0.5rem;
+	z-index: 999;
+}
+.album{
+	width: 100%;
+	height: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	color: #FC4868 !important;
+}
+.album__uno{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 20rem;
+}
+.album__uno > p{
+	color: #292929;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+.album__uno > h1{
+	color: #FC4868;
+	font-size: 4rem;
+	font-family: 'Meow Script', cursive;
+	font-weight: 400;
+	text-shadow: -1px 5px 0px rgb(150 150 150 / 26%);
 }
 .foto{
-	position: absolute;
-	height: 6rem;
-	width: 6rem;
-	right: 3.1rem;
-	box-shadow: 1px 3px 1px 1px rgba(150, 150, 150, 0.26);
-	border: .2rem solid #fff;
-	border-bottom: 1rem solid #fff;
-	transition: .5s;
-	cursor: pointer;
+	border: 0.3rem solid #fff;
+	box-shadow: 0 8px 6px -6px rgba(54, 54, 54, 0.6);
 }
-.foto.abierto > .pieFoto{
-	font-family: "DM Sans", sans-serif;
-	position: absolute;
-	bottom: -2.5rem;
-	width: 100%;
-	font-size: 1.2rem;
-	color: #051F36;
-}
-.foto.abierto{
-	top: 2rem;
-	left: 8rem;
-	width: 20rem;
-	height: 18rem;
-	border: .3rem solid #fff;
-	border-bottom: 3rem solid #fff;
-}
-.foto.uno{
-	bottom: 7rem;
-	background: url("assets/foto5.jpg");
-	background-position: center;
+.album__uno-foto{
+	background: url('assets/fotos/foto1.jpg');
+	width: 12rem;
+	height: 15rem;
 	background-size: cover;
-	transform: rotate(20deg);
-}
-.foto.dos{
-	bottom: 6rem;
-	background: url("assets/foto2.jpg");
 	background-position: center;
-	background-size: cover;
+	transform: rotate(-15deg);
+}
+.album__uno-foto > .cinta{
+	position: absolute;
+	right: -3rem;
+	transform: rotate(45deg);
+}
+.album__uno > .corazon1{
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	/* transform: rotate(-15deg); */
+	left: 3rem;
+	top: 1rem;
+}
+.album__uno > .corazon2{
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	transform: rotate(-15deg);
+	right: 6rem;
+	bottom: 14rem;
+}
+.album__uno > .corazon3{
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
 	transform: rotate(15deg);
+	right: 3rem;
+	bottom: 6rem;
 }
-.foto.tres{
-	bottom: 5rem;
-	background: url("assets/foto3.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	transform: rotate(10deg);
-}
-.foto.cuatro{
-	bottom: 4rem;
-	background: url("assets/foto4.jpg");
-	background-position: center;
-	background-size: cover;
-}
-.foto.cinco{
-	bottom: 3rem;
-	background: url("assets/toonmecom_97c5fb.jpg");
-	background-position: center;
-	background-size: cover;
+.album__uno > .corazon4{
+	width: 6rem;
+	height: 6rem;
+	position: absolute;
 	transform: rotate(-10deg);
-}
-.foto.cinco.abierto{
-	transform: rotate(0deg);
-}
-.foto.uno.abierto{
-	transform: rotate(0deg);
-}
-.foto.tres.abierto{
-	transform: rotate(0deg);
-}
-.foto.dos.abierto{
-	transform: rotate(0deg);
-}
-.foto.cuatro.abierto{
-	transform: rotate(0deg);
+	left: 6rem;
+	top: 8rem;
 }
 
-@media screen and (max-width: 768px){
-	.section-galeria > p{
-		bottom: .5rem;
-		font-size: 2rem;
+.swiper-slide{
+	padding: 1rem;
+}
+
+.album__dos, .album__tres, .album__cuatro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.album p{
+	color: #292929;
+	font-family: 'Grape Nuts', cursive;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.album__dos-foto.foto1{
+	background: url('assets/fotos/foto3.jpg');
+	width: 15rem;
+	height: 10rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(15deg);
+	position: absolute;
+	top: 8rem;
+	left: 8rem;
+}
+.album__dos-foto.foto1 .cinta{
+	position: absolute;
+	top: -1rem;
+	left: calc(50% - 3rem);
+}
+.album__dos-foto.foto2{
+	background: url('assets/fotos/foto5.jpg');
+	width: 8rem;
+	height: 10rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(-15deg);
+	position: absolute;
+	bottom: 4rem;
+}
+.album__dos-foto.foto2 .cinta{
+	position: absolute;
+	left: -3.8rem;
+	top: 4rem;
+	transform: rotate(90deg);
+}
+.album__dos>p{
+	position: absolute;
+	top: 3rem;
+}
+.album__dos>.corazon1{
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	width: 10rem;
+	transform: rotate(-25deg);
+}
+.album__dos>.corazon2{
+	position: absolute;
+	top: 5rem;
+	right: 8rem;
+	width: 7rem;
+	transform: rotate(25deg);
+}
+.album__tres-foto.foto1{
+	background: url('assets/fotos/foto6.jpg');
+	width: 10rem;
+	height: 15rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(-5deg);
+	position: absolute;
+	top: 5rem;
+	right: 15rem;
+}
+.album__tres-foto.foto1>.cinta{
+	position: absolute;
+	top: -1rem;
+	left: calc(50% - 3rem);
+}
+.album__tres-foto.foto2{
+	background: url('assets/fotos/foto4.jpg');
+	width: 7rem;
+	height: 10rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(10deg);
+	position: absolute;
+	top: 15rem;
+	right: 10rem;
+}
+.album__tres-foto.foto2>.cinta{
+	position: absolute;
+	right: -3rem;
+	transform: rotate(45deg);
+}
+.album__tres>.corazon1{
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	width: 10rem;
+	transform: rotate(-25deg);
+}
+.album__tres>.corazon2{
+	position: absolute;
+	top: 5rem;
+	right: 8rem;
+	width: 7rem;
+	transform: rotate(25deg);
+}
+.album__tres>p{
+	position: absolute;
+	top: calc(50% - 3rem);
+	left: 3rem;
+}
+.album__cuatro-foto.foto1{
+	background: url('assets/fotos/foto7.jpg');
+	width: 10rem;
+	height: 15rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(5deg);
+	position: absolute;
+	top: 2rem;
+	right: 13rem;
+}
+.album__cuatro-foto.foto1>.cinta{
+	position: absolute;
+	top: -1rem;
+	left: calc(50% - 3rem);
+}
+.album__cuatro-foto.foto2{
+	background: url('assets/fotos/foto8.jpg');
+	width: 10rem;
+	height: 10rem;
+	background-size: cover;
+	background-position: center;
+	transform: rotate(-10deg);
+	position: absolute;
+	bottom: 5rem;
+	right: 15rem;
+}
+.album__cuatro-foto.foto2>.cinta{
+	position: absolute;
+	right: -3rem;
+	transform: rotate(45deg);
+}
+.album__cuatro>.corazon1{
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	width: 10rem;
+	transform: rotate(-25deg);
+}
+.album__cuatro>.corazon2{
+	position: absolute;
+	top: 5rem;
+	right: 8rem;
+	width: 7rem;
+	transform: rotate(25deg);
+}
+.album__cuatro>p{
+	position: absolute;
+	top: calc(50% - 8rem);
+	left: 0rem;
+}
+
+@media screen and (max-width: 568px){
+	.album__uno .corazon1{
+		width: 5rem;
+		height: 5rem;
 	}
-	.foto{
-		right: 1rem;
-	}
-	.foto.uno{
-		bottom: 5rem;
-	}
-	.foto.dos{
-		bottom: 4rem;
-	}
-	.foto.tres{
-		bottom: 3rem;
-	}
-	.foto.cuatro{
-		bottom: 2rem;
-	}
-	.foto.cinco{
-		bottom: 1rem;
-	}
-	.foto.abierto{
-		left: 3rem;
+	.album__uno .corazon4{
 		top: 2rem;
-		width: 15rem;
-		height: 13rem;
+		left: 2rem;
+		width: 4rem;
 	}
-	.foto.abierto > .pieFoto{
-		font-size: 1rem;
+	.album__uno .corazon2{
+		bottom: 10rem;
+		right: 3rem;
+	}
+	.album__uno .corazon3{
+		width: 3rem;
+	}
+	.album__dos-foto.foto1{
+		left: 2rem;
+		width: 15rem;
+		height: 10rem;
+	}
+	.album__dos-foto.foto2{
+		width: 8rem;
+		height: 10rem;
+	}
+	.album__dos>p{
+		top: 1rem;
+		width: 15rem;
+	}
+	.album__dos .corazon1{
+		left: 2rem;
+		width: 6rem;
+	}
+	.album__dos .corazon2{
+		right: 5rem;
+		width: 6rem;
+	}
+	.album__tres .corazon1{
+		left: 0rem;
+		width: 10rem;
+	}
+	.album__tres .corazon2{
+		right: 8rem;
+		top: 6rem;
+		width: 6rem;
+	}
+	.album__tres>p{
+		top: 1rem;
+	}
+	.album__cuatro-foto.foto1{
+		right: 12rem;
+		width: 8rem;
+		height: 10rem;
+		top: 12rem;
+	}
+	.album__cuatro-foto.foto2{
+		left: -5rem;
+	}
+	.album__cuatro .corazon1{
+		right: 2rem;
+		width: 6rem;
+	}
+	.album__cuatro .corazon2{
+		right: 8rem;
+		top: 5rem;
+	}
+	.album__cuatro>p{
+		top: 1.5rem;
+		left: -4rem;
 	}
 }

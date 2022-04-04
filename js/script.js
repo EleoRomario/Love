@@ -240,3 +240,4 @@ volumen.addEventListener("change", (ev) =>{
   mainAudio.volume = ev.currentTarget.value;
 
 }, true)
+
