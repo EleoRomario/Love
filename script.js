@@ -200,35 +200,13 @@ closeCarta.addEventListener("click", () => {
 	felicitaciones.classList.toggle("open");
 });
 
-const abrirGaleria = () =>{
-	galeria.classList.toggle("open");
-	felicitaciones.classList.toggle("open")
-}
-const closeGaleria = document.querySelector("#closeGaleria");
-closeGaleria.addEventListener("click", () =>{
+const abrirGaleria = () => {
 	galeria.classList.toggle("open");
 	felicitaciones.classList.toggle("open");
-})
+};
+const closeGaleria = document.querySelector("#closeGaleria");
+closeGaleria.addEventListener("click", () => {
+	galeria.classList.toggle("open");
+	felicitaciones.classList.toggle("open");
+});
 
-const fotos = document.querySelectorAll('.foto');
-console.log(fotos);
-
-const textos = [
-	"Con mi bella durmiente. ❤",
-	"Te amo ❤",
-	"3 años, y por muchos mas. ❤",
-	"Aqui casual comiendo, uhmm rico. ",
-	"Rosmery, El amor de mi vida. ❤"
-]
-let texto = document.createElement('p');
-texto.innerHTML = "hola";
-texto.className = "pieFoto";
-
-fotos.forEach((f,i) => {
-	f.addEventListener('click', () => {
-		fotos.forEach(fo=>fo.classList.remove('abierto'))
-		f.classList.add('abierto')
-			texto.innerHTML = textos[i];
-			f.appendChild(texto);
-	})
-})
